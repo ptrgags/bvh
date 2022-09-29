@@ -24,3 +24,10 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         add_subdirectory(test)
     endif ()
 endif ()
+
+include(GNUInstallDirs)
+
+install(
+    DIRECTORY include/bvh
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
